@@ -13,10 +13,8 @@ struct Grammar {
     map<string, vector<vector<string>>> rules; // Nonterminal -> list of RHS rules
 };
 
-// Check if a symbol is a terminal (lowercase)
+// Check if a symbol is a terminal (lowercase) or nonterminal (uppercase)
 bool isTerminal(const string &s) { return s.size() == 1 && islower(s[0]); }
-
-// Check if a symbol is a nonterminal (uppercase)
 bool isNonTerminal(const string &s) { return s.size() == 1 && isupper(s[0]); }
 
 // Step 1: Remove ε-productions (rules producing empty string)
