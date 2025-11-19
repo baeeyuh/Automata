@@ -8,7 +8,6 @@ using namespace std;
 bool simulateCFG(const string &input)
 {
     // Step 1: Define the grammar rules
-    // Each non-terminal (e.g., 'S') maps to its list of production rules.
     unordered_map<char, vector<string>> grammar;
     grammar['S'] = {"aSb", "ab"}; // Non-terminal S → aSb | ab
 
